@@ -1,2 +1,3 @@
 # randd
- Resurch and development for random ideas I have
+
+ Research and development for random ideas I have
