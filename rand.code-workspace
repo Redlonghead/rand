@@ -7,5 +7,7 @@
 			"path": "../Redlonghead.github.io"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "rand"
+	}
 }
