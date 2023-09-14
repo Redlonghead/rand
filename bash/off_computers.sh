@@ -8,7 +8,7 @@ count=24
 print_usage() {
     printf "
     Usage:
-    'offping [building] [room]' or 'offping -flags'
+    '$0 [building] [room]' or '$0 -flags'
 
     Flags:
     -b -> building
