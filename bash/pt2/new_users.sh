@@ -13,15 +13,11 @@ if [ $# -eq 0 ]; then
     print_usage
 elif [[ "$user_file" == *.txt ]] ; then
     # stuff
-    cat $user_file | while read new_user; do 
+    cat $user_file | while read new_user; do
         new_user=$(echo $new_user | tr '[:upper:]' '[:lower:]')
-        first=$(echo $new_user | cut -d $delimiter -f 1 )
-        last=$(echo $new_user | cut -d $delimiter -f 2 )
-        user=$(echo $first | cut -c1 )$last
-        
-        # add accounts for removing
-        echo $user >> tests
-
+        first=$(echo $new_user | cut -d $delimiter -f 1)
+        last=$(echo $new_user | cut -d $delimiter -f 2)
+        user=$(echo $first | cut -c1)$last
         passwd=$user"0!"
         sudo useradd -m $user
         echo "$user:$passwd" | sudo chpasswd -m
